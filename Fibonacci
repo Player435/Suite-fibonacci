@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void SuiteFibonacci(int n) {
+    int V1 = 0, V2 = 1, V;
+
+    printf("Suite de Fibonacci : ");
+
+    for (int i = 1; i <= n; ++i) {
+        printf("%d, ", V1);
+        V = V1 + V2;
+        V1 = V2;
+        V2 = V;
+    }
+}
+
+int main() {
+    int n;
+    printf("Entrez le nombre de termes: ");
+    scanf("%d", &n);
+    
+    SuiteFibonacci(n);
+
+    return 0;
+}
